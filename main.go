@@ -2,17 +2,14 @@ package main
 
 import (
 	tgbotapi "github.com/go-telegram-bot-api/telegram-bot-api"
-	"github.com/joho/godotenv"
 	"log"
 	"notificationBot/database"
 	"notificationBot/logger"
 	"notificationBot/tgbot"
-	"os"
 )
 
 func main() {
-	_ = godotenv.Load("globals.env")
-	botToken := os.Getenv("BOT_TOKEN")
+	botToken := "5162458517:AAGatmkeUkyJZhtqjNeWAsBhJ7bdlsXyNuw"
 
 	myLogger := logger.RegisterLogger("logs.txt")
 	defer myLogger.File.Close()

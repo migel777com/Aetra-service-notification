@@ -13,12 +13,6 @@ type DBAccess struct {
 
 func OpenDB(logger *logger.Logger) (DBAccess, error) {
 
-	/*_ = godotenv.Load("globals.env")
-	db_username := os.Getenv("db_username")
-	db_password := os.Getenv("db_password")
-	server_address := os.Getenv("server_address")
-	dp_port := os.Getenv("db_port")
-	db_name := os.Getenv("db_name")*/
 	db, err := sql.Open("mysql", "puck:tidolbaeb?@tcp(185.22.64.115:3306)/qrservice?parseTime=true")
 
 	if err != nil {
