@@ -34,7 +34,7 @@ func HandleCommand(update tgbotapi.Update, server Server) {
 	} else {
 		server.Db.AddNewUser(chatID, username)
 
-		msg := tgbotapi.NewMessage(chatID, "Предоствьте номер телефона, нажав на кнопку в меню")
+		msg := tgbotapi.NewMessage(chatID, "Предоставьте номер телефона, нажав на кнопку в меню")
 
 		msg.ReplyMarkup = tgbotapi.NewReplyKeyboard(
 			tgbotapi.NewKeyboardButtonRow(
